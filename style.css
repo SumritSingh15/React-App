@@ -1,0 +1,43 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.logo{
+    width: 100px;
+}
+.nav-items > ul{
+    display: flex;
+    padding: 10px 20px;
+    
+}
+.nav-items > ul > li {
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    list-style-type: none;
+}
+.Restaurants-Container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.Restro-cards{
+    margin: 10px;
+     padding: 5px;
+    width: 300px;
+   
+    
+}
+.Restro-cards:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+.Search-bar{
+    padding: 10px;
+}
+.restro-image{
+   width: 100%;
+   height: 200px;
+  
+}
