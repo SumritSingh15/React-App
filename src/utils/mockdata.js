@@ -1,40 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Header = () => {
-     return (
-          <div className="Header">
-               <div className="logo-container">
-                    <img className="logo" src="https://cdn2.f-cdn.com/contestentries/2426851/74260034/6689bc27dfb41_thumb900.jpg" />
-               </div>
-               <div className="nav-items">
-                    <ul>
-                         <li>Home</li>
-                         <li>About us</li>
-                         <li>Contact us</li>
-                         <li>Cart</li>
-                    </ul>
-               </div>
-          </div>
-     )
-}
-
-const RestaurantCard = (props) => {
-     const { resdata } = props
-     const {
-          cloudinaryImageId, name, cuisines, avgRating, costForTwo, deliveryTime } = resdata?.info
-
-     return (
-          <div className="Restro-cards" style={{ backgroundColor: "#f0f0f0" }}>
-               <img className="restro-image" alt="restro-image" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} />
-               <h3>{name}</h3>
-               <h3>{cuisines.join(",")}</h3>
-               <h3>{avgRating}</h3>
-               <h3>{costForTwo}</h3>
-               <h3>{deliveryTime}minutes</h3>
-          </div>
-     )
-}
 const Restrolist = [
      {
           "info": {
@@ -1922,37 +1885,4 @@ const Restrolist = [
           }
      }
 ]
-
-
-const Body = () => {
-     return (
-          <div className="body">
-               <div className="Search-bar">Search</div>
-               <div className="Restaurants-Container">
-                    {
-                         Restrolist.map((restaurant) => (
-                              <RestaurantCard key={restaurant.info.id} resdata={restaurant} />
-                         ))
-                    }
-
-               </div>
-          </div>
-     )
-}
-
-
-
-
-const AppLayout = () => {
-     return (
-          <div className="App">
-               <Header/>
-               <Body/>
-          </div>
-     )
-}
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+export default Restrolist;

@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .Header{
     display: flex;
     justify-content: space-between;
@@ -33,8 +37,9 @@
     border: 1px solid black;
     cursor: pointer;
 }
-.Search-bar{
-    padding: 10px;
+.filter-btn{
+   margin: 10px;
+    cursor: pointer;
 }
 .restro-image{
    width: 100%;
